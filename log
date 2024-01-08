@@ -1,0 +1,177 @@
+Script started on Wed Apr 27 15:58:29 2022
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+[?1034hbash-3.2$ git status
+On branch AlgorithmEngineer
+Your branch is ahead of 'origin/AlgorithmEngineer' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	[31mjunit5.jar[m
+	[31mlog[m
+	[31mout/[m
+
+nothing added to commit but untracked files present (use "git add" to track)
+bash-3.2$ git log -1[K[K[K[K[K[K[K[K[K[Kgit status
+On branch AlgorithmEngineer
+Your branch is ahead of 'origin/AlgorithmEngineer' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	[31mmodified:   Makefile[m
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	[31mjunit5.jar[m
+	[31mlog[m
+	[31mout/[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+bash-3.2$ gt [K[Kit add Makefile 
+bash-3.2$ git commit -m "put i n[K[Kn clea[K[K[K[K'cea[K[Klean' target"
+[AlgorithmEngineer 92beaba] put in 'clean' target
+ Committer: Ayush Mahapatra <2monkey3@MacBook-Air.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 2 insertions(+)
+bash-3.2$ git push
+(amahapatra@@best-linux.cs.wisc.edu) Password: 
+(amahapatra@@best-linux.cs.wisc.edu) Duo two-factor login for mahapatra3
+
+Enter a passcode or select one of the following options:
+
+ 1. Duo Push to XXX-XXX-2916
+
+Passcode or option (1-1): 1
+Enumerating objects: 8, done.
+Counting objects:  12% (1/8)Counting objects:  25% (2/8)Counting objects:  37% (3/8)Counting objects:  50% (4/8)Counting objects:  62% (5/8)Counting objects:  75% (6/8)Counting objects:  87% (7/8)Counting objects: 100% (8/8)Counting objects: 100% (8/8), done.
+Delta compression using up to 8 threads
+Compressing objects:  16% (1/6)Compressing objects:  33% (2/6)Compressing objects:  50% (3/6)Compressing objects:  66% (4/6)Compressing objects:  83% (5/6)Compressing objects: 100% (6/6)Compressing objects: 100% (6/6), done.
+Writing objects:  16% (1/6)Writing objects:  33% (2/6)Writing objects:  50% (3/6)Writing objects:  66% (4/6)Writing objects:  83% (5/6)Writing objects: 100% (6/6)Writing objects: 100% (6/6), 714 bytes | 714.00 KiB/s, done.
+Total 6 (delta 3), reused 0 (delta 0), pack-reused 0
+To ssh://@best-linux.cs.wisc.edu:/p/course/cs400/activities/repos/Project3_BE_blue
+   6c6ba50..92beaba  AlgorithmEngineer -> AlgorithmEngineer
+bash-3.2$ git log -1
+[?1h=[33mcommit 92beaba4ac3d46e9cccdfd51075eafce4dbb5102[m[33m ([m[1;36mHEAD -> [m[1;32mAlgorithmEngineer[m[33m, [m[1;31morig[m [33m[m[33m[m[1;36m[m[1;32m[m[33m[m[1;31min/AlgorithmEngineer[m[33m)[m[m
+Author: Ayush Mahapatra <2monkey3@MacBook-Air.local>[m
+Date:   Wed Apr 27 15:59:35 2022 -0500[m
+[m
+    put in 'clean' target[m
+[K[?1l>bash-3.2$ make clean
+rm *.class
+rm: *.class: No such file or directory
+make: *** [clean] Error 1
+bash-3.2$ ls
+AlgorithmEngineerTests.java	IHospitalDeliverBackend.java
+CS400Graph.java			IHospitalDeliverFrontend.java
+CS400GraphSorted.java		IHospitalLoader.java
+GraphADT.java			Makefile
+HospitalDeliverMain.java	junit5.jar
+HospitalPathPlaceHolderAE.java	log
+ICS400GraphSorted.java		out
+IHospital.java
+bash-3.2$ make runTests
+make: *** No rule to make target `AlgorithmEngineerTests.class', needed by `runTests'.  Stop.
+bash-3.2$ git status
+On branch AlgorithmEngineer
+Your branch is up to date with 'origin/AlgorithmEngineer'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	[31mmodified:   Makefile[m
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	[31mjunit5.jar[m
+	[31mlog[m
+	[31mout/[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+bash-3.2$ git add Makefile 
+bash-3.2$ git commit -m "creat[K[K[K[K[Kfixed syntax error n[Kin target"
+[AlgorithmEngineer 70f622f] fixed syntax error in target
+ Committer: Ayush Mahapatra <2monkey3@MacBook-Air.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+bash-3.2$ git [K[K[K[Kmake clean
+rm *.class
+rm: *.class: No such file or directory
+make: *** [clean] Error 1
+bash-3.2$ m[Kls
+AlgorithmEngineerTests.java	IHospitalDeliverBackend.java
+CS400Graph.java			IHospitalDeliverFrontend.java
+CS400GraphSorted.java		IHospitalLoader.java
+GraphADT.java			Makefile
+HospitalDeliverMain.java	junit5.jar
+HospitalPathPlaceHolderAE.java	log
+ICS400GraphSorted.java		out
+IHospital.java
+bash-3.2$ make runt[KTests
+javac CS400Graph.java
+javac CS400GraphSorted.java
+javac -cp .:junit5.jar AlgorithmEngineerTests.java -Xlint
+./HospitalPathPlaceHolderAE.java:1: warning: [rawtypes] found raw type: CS400Graph
+public class HospitalPathPlaceHolderAE extends CS400Graph {
+                                               ^
+  missing type arguments for generic class CS400Graph<T>
+  where T is a type-variable:
+    T extends Object declared in class CS400Graph
+1 warning
+java -jar junit5.jar --class-path . --scan-classpath
+
+Thanks for using JUnit! Support its development at https://junit.org/sponsoring
+
+[36m╷[0m
+[36m├─[0m [36mJUnit Jupiter[0m [32m✔[0m
+[36m│  └─[0m [36mAlgorithmEngineerTests[0m [32m✔[0m
+[36m│     ├─[0m [34mtestPathCostDistance1()[0m [32m✔[0m
+[36m│     ├─[0m [34mtestPathMinutesPathList()[0m [32m✔[0m
+[36m│     ├─[0m [34mtestPathCostMinutes1()[0m [32m✔[0m
+[36m│     ├─[0m [34mtestPathCostMinutes2()[0m [32m✔[0m
+[36m│     ├─[0m [34mtestPathDistance2()[0m [32m✔[0m
+[36m│     └─[0m [34mtestPathDistancePathList()[0m [32m✔[0m
+[36m└─[0m [36mJUnit Vintage[0m [32m✔[0m
+
+Test run finished after 152 ms
+[         3 containers found      ]
+[         0 containers skipped    ]
+[         3 containers started    ]
+[         0 containers aborted    ]
+[         3 containers successful ]
+[         0 containers failed     ]
+[         6 tests found           ]
+[         0 tests skipped         ]
+[         6 tests started         ]
+[         0 tests aborted         ]
+[         6 tests successful      ]
+[         0 tests failed          ]
+
+bash-3.2$ exit
+exit
+
+Script done on Wed Apr 27 16:03:14 2022
